@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ascending Descending</title>
+    <style>
+        
+        body{
+            padding: 0;
+            margin: 0;
+            font-size: 2rem;
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+        }
+        .container div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            height: 100vh;
+            display: grid;
+            gap: 2px;
+            grid-template-areas: "a a"
+                                 
+                                 "b c"
+                                 
+                                 "d e";
+        }
+        #top {
+            grid-area: a;
+            background-color: #2b2929;
+            
+        }
+        #button1 {
+            grid-area: b;
+            background-color: #2f3130;
+            cursor: pointer;
+            font-size: 3rem;
+            font-weight: bold;
+        }
+        #button2 {
+            grid-area: c;
+            background-color: #8d8d8d;
+            cursor: pointer;
+            font-size: 3rem;
+            font-weight: bold;
+        }
+        #box1 {
+            grid-area: d;
+            background-color: #494845;
+        }
+        #box2 {
+            grid-area: e;
+            background-color: #5a5454;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="top"></div>
+        <div id="button1" onclick="ascending()">Ascending Order</div>
+        <div id="button2" onclick="descending()">Descending Order</div>
+        <div id="box1"></div>
+        <div id="box2"></div>
+    </div>
+    
+    
+    <script src="./app.js"></script>
+</body>
+</html>
